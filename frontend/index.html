@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ChalaFirale - Explore India's Tiger Reserves</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore India's Majestic Tigers</h1>
+        <p>Your adventure into the wilderness starts here!</p>
+        <button onclick="window.location.href='book_now.html'">Book Now</button>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <h2>Discover Tiger Reserves</h2>
+        <p>Explore tiger reserves across India and witness their beauty firsthand.</p>
+        <div class="reserves-grid">
+            <!-- Reserve cards will go here -->
+        </div>
+    </section>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Dynamically load header and footer
+        fetch("header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
+        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
 </body>
 </html>
