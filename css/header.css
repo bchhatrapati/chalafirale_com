@@ -1,72 +1,86 @@
-/* header.css */
-.site-header {
-    display: flex; /* Aligns items horizontally */
-    justify-content: space-between; /* Spreads navigation and logo evenly */
-    align-items: center; /* Aligns items vertically */
-    background-color: #333; /* Dark background for header */
-    color: #fff;
-    padding: 10px 20px; /* Spacing inside the header */
-    width: 100%; /* Ensures full width */
-    position: relative; /* Stays in flow of the document */
-    z-index: 1000; /* Ensures it’s above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for design */
+/* Header Section Styling */
+header {
+    background-color: #fff; /* White background for the header */
+    padding: 20px 0; /* Vertical padding for spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a clean, elevated look */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.site-header .logo img {
-    max-width: 120px; /* Adjust logo size */
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Align items vertically */
+    max-width: 1200px;
+    margin: 0 auto; /* Center align the navbar */
+    padding: 0 20px; /* Padding for spacing */
+}
+
+/* Logo Section */
+.logo img {
+    width: 150px; /* Adjust logo size */
     height: auto;
 }
 
-.nav-menu ul {
-    display: flex;
+/* Navbar Links */
+.nav-links {
     list-style: none;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
-.nav-menu ul li {
-    margin-left: 20px;
+.nav-links li {
+    margin: 0 15px; /* Space between each nav link */
 }
 
-.nav-menu ul li a {
+.nav-links a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: #333; /* Dark text for better contrast */
     font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.cta-button .btn {
+.nav-links a:hover {
+    color: #f57c00; /* Orange color on hover */
+}
+
+/* Call-to-Action Button */
+.cta .btn-cta {
     background-color: #f57c00; /* Tiger orange */
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
     text-decoration: none;
-    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.menu-toggle {
-    display: none; /* Initially hidden */
+.cta .btn-cta:hover {
+    background-color: #d45e00; /* Darker orange on hover */
 }
 
-/* For Mobile View */
+/* Mobile View Styling */
 @media (max-width: 768px) {
-    .nav-menu ul {
-        display: none;
-        flex-direction: column; /* Stack items vertically */
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Position below header */
-        left: 0;
-        width: 100%;
+    .navbar {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: flex-start; /* Align to the left for mobile */
+        padding: 20px;
     }
 
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
+    .nav-links {
+        flex-direction: column; /* Stack links vertically on mobile */
+        margin-top: 20px;
     }
 
-    .menu-toggle.active + .nav-menu ul {
-        display: flex; /* Show menu on toggle */
+    .nav-links li {
+        margin: 10px 0; /* More space between links in mobile view */
+    }
+
+    .cta {
+        margin-top: 20px; /* Add space for CTA button */
     }
 }
