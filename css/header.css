@@ -1,84 +1,72 @@
-/* Header Styles */
+/* header.css */
 .site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #2C3E50;
+    display: flex; /* Aligns items horizontally */
+    justify-content: space-between; /* Spreads navigation and logo evenly */
+    align-items: center; /* Aligns items vertically */
+    background-color: #333; /* Dark background for header */
     color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 10px 20px; /* Spacing inside the header */
+    width: 100%; /* Ensures full width */
+    position: relative; /* Stays in flow of the document */
+    z-index: 1000; /* Ensures it’s above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for design */
 }
 
 .site-header .logo img {
-    height: 50px;
+    max-width: 120px; /* Adjust logo size */
+    height: auto;
 }
 
 .nav-menu ul {
-    list-style: none;
     display: flex;
-    gap: 20px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+.nav-menu ul li {
+    margin-left: 20px;
 }
 
-.nav-menu ul li a:hover {
-    color: #FF8C00;
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .cta-button .btn {
-    background-color: #FF8C00;
+    background-color: #f57c00; /* Tiger orange */
     color: #fff;
     padding: 8px 16px;
+    border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.cta-button .btn:hover {
-    background-color: #E07B00;
+    font-size: 14px;
 }
 
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+    display: none; /* Initially hidden */
 }
 
-.menu-toggle .bar {
-    background-color: #fff;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-}
-
-/* Responsive Header */
+/* For Mobile View */
 @media (max-width: 768px) {
-    .nav-menu {
+    .nav-menu ul {
         display: none;
-        flex-direction: column;
+        flex-direction: column; /* Stack items vertically */
+        background-color: #333;
         position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #2C3E50;
+        top: 60px; /* Position below header */
+        left: 0;
         width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu.active {
-        display: flex;
     }
 
     .menu-toggle {
-        display: flex;
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle.active + .nav-menu ul {
+        display: flex; /* Show menu on toggle */
     }
 }

@@ -1,99 +1,67 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chalafirale - Experience the Roar</title>
+    <title>Chalafirale - Tiger Safari Adventures</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-    <!-- Header Section -->
-    <header>
-        <!-- Include reusable header component -->
-        <div id="header-placeholder"></div>
-    </header>
+    <!-- Header -->
+    <div id="header"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero">
         <div class="hero-content">
-            <h1>Experience the Roar – Unforgettable Tiger Safaris Await!</h1>
-            <p>Explore the majestic world of tigers with Chalafirale. Your adventure begins here.</p>
-            <a href="book_now.html" class="btn">Book Now</a>
-            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+            <h1>Experience the Wild - Book Your Tiger Safari</h1>
+            <p>Get up close with the majestic tigers in the best tiger reserves.</p>
+            <button><a href="book_now.html">Book Now</a></button>
         </div>
     </section>
 
-    <!-- Featured Tiger Reserves Section -->
-    <section class="featured-reserves">
+    <!-- Featured Reserves Section -->
+    <section id="featured-reserves">
         <h2>Featured Tiger Reserves</h2>
-        <div class="reserves-container">
+        <div class="reserve-list">
+            <!-- Reserve 1 -->
             <div class="reserve-card">
-                <img src="assets/images/reserve1.jpg" alt="Reserve 1">
+                <img src="assets/images/reserve1.jpg" alt="Ranthambore National Park">
                 <h3>Ranthambore National Park</h3>
-                <p>Experience the wilderness like never before.</p>
+                <p>One of India's most famous reserves, home to a variety of wildlife.</p>
+                <a href="reserves.html">Explore More</a>
             </div>
+            <!-- Reserve 2 -->
             <div class="reserve-card">
-                <img src="assets/images/reserve2.jpg" alt="Reserve 2">
-                <h3>Bandhavgarh Tiger Reserve</h3>
-                <p>Spot majestic tigers in their natural habitat.</p>
+                <img src="assets/images/reserve2.jpg" alt="Sundarbans Reserve">
+                <h3>Sundarbans Reserve</h3>
+                <p>A unique ecosystem with a rich diversity of flora and fauna.</p>
+                <a href="reserves.html">Explore More</a>
             </div>
+            <!-- Reserve 3 -->
             <div class="reserve-card">
-                <img src="assets/images/reserve3.jpg" alt="Reserve 3">
-                <h3>Kanha Tiger Reserve</h3>
-                <p>A paradise for wildlife enthusiasts.</p>
+                <img src="assets/images/reserve3.jpg" alt="Jim Corbett National Park">
+                <h3>Jim Corbett National Park</h3>
+                <p>Known for its breathtaking beauty and famous tiger sightings.</p>
+                <a href="reserves.html">Explore More</a>
             </div>
         </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <h2>Why Choose Chalafirale?</h2>
-        <ul>
-            <li>✔ Personalized Safari Experiences</li>
-            <li>✔ Expert Wildlife Guides</li>
-            <li>✔ Comfortable and Safe Accommodations</li>
-            <li>✔ Sustainable Tourism Practices</li>
-        </ul>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>What Our Clients Say</h2>
+    <section id="testimonials">
+        <h2>What Our Guests Say</h2>
         <div class="testimonial">
-            <p>"An unforgettable experience! Chalafirale made our tiger safari truly magical."</p>
-            <h4>- A Happy Adventurer</h4>
+            <p>"An unforgettable experience in the heart of the jungle!" - John Doe</p>
         </div>
         <div class="testimonial">
-            <p>"Professional team, stunning reserves, and memories for a lifetime."</p>
-            <h4>- Wildlife Enthusiast</h4>
+            <p>"A must-do for any wildlife enthusiast!" - Jane Smith</p>
         </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <section class="cta">
-        <h2>Ready for Your Adventure?</h2>
-        <a href="book_now.html" class="btn">Book Your Safari Now</a>
-    </section>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-    <!-- Footer Section -->
-    <footer>
-        <!-- Include reusable footer component -->
-        <div id="footer-placeholder"></div>
-    </footer>
-
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
-    <script>
-        // Load reusable header and footer
-        document.getElementById('header-placeholder').innerHTML = '<object type="text/html" data="components/header.html"></object>';
-        document.getElementById('footer-placeholder').innerHTML = '<object type="text/html" data="components/footer.html"></object>';
-    </script>
 </body>
-
 </html>

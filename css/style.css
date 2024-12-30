@@ -1,157 +1,77 @@
-/* Global Styles */
+/* css/style.css */
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4;
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
 
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #FF8C00;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.btn-secondary {
-    background-color: #444;
-}
-
-/* Hero Section */
-.hero {
-    background: url('../assets/images/hero-banner.jpg') no-repeat center center/cover;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-/* Featured Reserves Section */
-.featured-reserves {
-    background-color: #f9f9f9;
-}
-
-.featured-reserves h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.reserves-container {
+header nav ul {
+    list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#hero {
+    background: url('assets/images/hero.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
+
+#hero h1 {
+    font-size: 3em;
+}
+
+#featured-reserves {
+    padding: 40px 0;
+    background-color: #fff;
+    text-align: center;
 }
 
 .reserve-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
     text-align: center;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .reserve-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
 }
 
-.reserve-card h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
+#testimonials {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
 }
 
-.reserve-card p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Why Choose Us Section */
-.why-choose-us {
-    background-color: #FFFAE6;
-}
-
-.why-choose-us ul {
-    list-style: none;
-    padding: 0;
-}
-
-.why-choose-us li {
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
-/* Testimonials Section */
-.testimonials {
-    background-color: #f1f1f1;
-}
-
-.testimonial {
-    margin: 20px auto;
-    max-width: 600px;
-    font-style: italic;
-    color: #555;
-}
-
-.testimonial h4 {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* CTA Section */
-.cta {
-    background: #2C3E50;
-    color: #fff;
-}
-
-.cta h2 {
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .reserves-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .reserve-card {
-        width: 90%;
-    }
+footer .social-links a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
 }
