@@ -6,36 +6,55 @@
     <title>Book Your Safari - Chalafirale</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/book_now.css">
 </head>
 <body>
-    <!-- Include header.html -->
-    <?php include 'header.html'; ?>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 
-    <section class="booking-form">
-        <h2>Book Your Safari</h2>
-        <form action="book_safari.php" method="POST">
+<section class="booking-form">
+    <h2>Book Your Jungle Safari Adventure</h2>
+    <form action="book_safari.php" method="POST">
+        <div class="form-group">
             <label for="reserve">Select Reserve:</label>
             <select id="reserve" name="reserve" onchange="updatePrice()" required>
+                <option value="" disabled selected>Select a Reserve</option>
                 <option value="Tadoba">Tadoba</option>
                 <option value="Pench">Pench</option>
                 <option value="Ranthambore">Ranthambore</option>
                 <option value="Corbett">Jim Corbett</option>
             </select>
+        </div>
 
+        <div class="form-group">
             <label for="date">Choose Date:</label>
             <input type="date" id="date" name="date" required>
+        </div>
 
+        <div class="form-group">
             <label for="people">No. of People:</label>
-            <input type="number" id="people" name="people" min="1" required>
+            <input type="number" id="people" name="people" min="1" placeholder="Enter no. of people" required>
+        </div>
 
-            <p>Price: <span id="price">INR 300</span></p>
+        <div class="form-group price-display">
+            <p>Total Price: <span id="price">INR 6990</span></p>
+        </div>
 
-            <button type="submit">Confirm Booking</button>
-        </form>
-    </section>
+        <button type="submit" class="btn">Confirm Booking</button>
+    </form>
+</section>
 
-    <!-- Include footer.html -->
-    <?php include 'footer.html'; ?>
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script>
+      fetch('footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
 
     <script src="js/script.js"></script>
 </body>

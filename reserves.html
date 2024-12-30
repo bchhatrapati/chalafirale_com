@@ -6,38 +6,61 @@
     <title>Tiger Reserves - Chalafirale</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/reserves.css">
 </head>
 <body>
-    <!-- Include header.html -->
-    <?php include 'header.html'; ?>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 
-    <section class="reserve-detail" id="tadoba">
-        <h2>Tadoba Tiger Reserve</h2>
-        <p>Tadoba, located in Maharashtra, is one of India’s oldest and most well-known tiger reserves. Famous for its diverse flora and fauna, it offers incredible sightings of the Bengal tiger.</p>
-        <a href="book_now.html">Book Now</a>
+    <section class="reserves-container">
+        <div class="reserve-card" id="tadoba">
+            <div class="image" style="background-image: url('assets/images/tadoba.jpg');"></div>
+            <div class="content">
+                <h2>Tadoba Tiger Reserve</h2>
+                <p>Tadoba, located in Maharashtra, is one of India’s oldest and most well-known tiger reserves. Famous for its diverse flora and fauna, it offers incredible sightings of the Bengal tiger.</p>
+                <a href="book_now.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="reserve-card" id="pench">
+            <div class="image" style="background-image: url('assets/images/pench.jfif');"></div>
+            <div class="content">
+                <h2>Pench Tiger Reserve</h2>
+                <p>Pench, on the border of Madhya Pradesh and Maharashtra, is known for its scenic beauty and rich wildlife. The reserve is a haven for tiger sightings, especially during the safari season.</p>
+                <a href="book_now.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="reserve-card" id="ranthambore">
+            <div class="image" style="background-image: url('assets/images/ranthambore.jpg');"></div>
+            <div class="content">
+                <h2>Ranthambore National Park</h2>
+                <p>Located in Rajasthan, Ranthambore is famous for its large tiger population and the stunning landscape that features ancient ruins and vast dry forests.</p>
+                <a href="book_now.html" class="btn">Book Now</a>
+            </div>
+        </div>
+
+        <div class="reserve-card" id="corbett">
+            <div class="image" style="background-image: url('assets/images/corbett.webp');"></div>
+            <div class="content">
+                <h2>Jim Corbett National Park</h2>
+                <p>As India’s oldest national park, Jim Corbett has a rich legacy of wildlife conservation and offers great opportunities for tiger sightings in its lush forests.</p>
+                <a href="book_now.html" class="btn">Book Now</a>
+            </div>
+        </div>
     </section>
 
-    <section class="reserve-detail" id="pench">
-        <h2>Pench Tiger Reserve</h2>
-        <p>Pench, on the border of Madhya Pradesh and Maharashtra, is known for its scenic beauty and rich wildlife. The reserve is a haven for tiger sightings, especially during the safari season.</p>
-        <a href="book_now.html">Book Now</a>
-    </section>
-
-    <section class="reserve-detail" id="ranthambore">
-        <h2>Ranthambore National Park</h2>
-        <p>Located in Rajasthan, Ranthambore is famous for its large tiger population and the stunning landscape that features ancient ruins and vast dry forests.</p>
-        <a href="book_now.html">Book Now</a>
-    </section>
-
-    <section class="reserve-detail" id="corbett">
-        <h2>Jim Corbett National Park</h2>
-        <p>As India’s oldest national park, Jim Corbett has a rich legacy of wildlife conservation and offers great opportunities for tiger sightings in its lush forests.</p>
-        <a href="book_now.html">Book Now</a>
-    </section>
-
-    <!-- Include footer.html -->
-    <?php include 'footer.html'; ?>
-
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+    
     <script src="js/script.js"></script>
-</body>
-</html>
+    </body>
+    </html>

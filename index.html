@@ -6,21 +6,25 @@
     <meta name="description" content="Chalafirale offers unforgettable tiger safari experiences in India’s top tiger reserves, including Tadoba, Pench, Ranthambore, and Jim Corbett. Book your tour now!">
     <meta name="keywords" content="Tiger safari, India, wildlife tour, Tadoba, Pench, Ranthambore, Jim Corbett">
     <title>ChalaFirale - Jungle Safari World</title>
+    <link rel="icon" href="assets/logos/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Header -->
-    <div id="header">
-        <!-- Include header.html -->
-        <?php include 'header.html'; ?>
-    </div>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-content">
-            <h1>Experience the Wild with Chala Firale</h1>
+            <h1>Experience the Wild with ChalaFirale</h1>
             <p>Explore India's top tiger reserves on an unforgettable safari!</p>
+            <a href="book_now.html" class="btn-primary">Book Your Safari Now</a>
         </div>
     </section>
 
@@ -29,25 +33,25 @@
         <h2>Featured Tiger Reserves</h2>
         <div class="reserve-list">
             <div class="reserve-item">
-                <img src="images/tadoba.jpg" alt="Tadoba Tiger Reserve">
+                <img src="assets/images/tadoba.jpg" alt="Tadoba Tiger Reserve">
                 <h3>Tadoba</h3>
                 <p>One of India's oldest and most famous tiger reserves.</p>
                 <a href="reserves.html#tadoba">Learn More</a>
             </div>
             <div class="reserve-item">
-                <img src="images/pench.jpg" alt="Pench Tiger Reserve">
+                <img src="assets/images/pench.jfif" alt="Pench Tiger Reserve">
                 <h3>Pench</h3>
                 <p>A picturesque reserve known for its rich wildlife.</p>
                 <a href="reserves.html#pench">Learn More</a>
             </div>
             <div class="reserve-item">
-                <img src="images/ranthambore.jpg" alt="Ranthambore National Park">
+                <img src="assets/images/ranthambore.jpg" alt="Ranthambore National Park">
                 <h3>Ranthambore</h3>
                 <p>Famous for its tiger sightings and historical forts.</p>
                 <a href="reserves.html#ranthambore">Learn More</a>
             </div>
             <div class="reserve-item">
-                <img src="images/corbett.jpg" alt="Jim Corbett National Park">
+                <img src="assets/images/corbett.webp" alt="Jim Corbett National Park">
                 <h3>Jim Corbett</h3>
                 <p>The oldest national park in India, a true tiger haven.</p>
                 <a href="reserves.html#corbett">Learn More</a>
@@ -76,10 +80,12 @@
     </section>
 
     <!-- Footer -->
-    <div id="footer">
-        <!-- Include footer.html -->
-        <?php include 'footer.html'; ?>
-    </div>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
     <script src="js/script.js"></script>
 </body>

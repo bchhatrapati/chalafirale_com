@@ -1,0 +1,86 @@
+/* Info Call Form Styling */
+.info-call-form {
+    background-color: #f4f4f4;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+.info-call-form h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.info-call-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Groups */
+.info-call-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-call-form .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.info-call-form .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.info-call-form .form-group input:focus {
+    border-color: #ff6600;
+    outline: none;
+}
+
+/* Button Styling */
+.info-call-form .btn {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.info-call-form .btn:hover {
+    background-color: #cc5200;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-call-form {
+        padding: 15px 20px;
+    }
+
+    .info-call-form h2 {
+        font-size: 20px;
+    }
+
+    .info-call-form .form-group input {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .info-call-form .btn {
+        font-size: 16px;
+    }
+}

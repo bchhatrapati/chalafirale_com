@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    /* background-image: url("assets\images\background-tiger.jpg"); */
 }
 
 a {
@@ -21,11 +22,17 @@ h2 {
 #header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+}
+#header a {
+    color: white;
+    text-decoration: none;
 }
 
 #header .logo img {
-    width: 150px;
+    width: 90px;
 }
 
 #header nav ul {
@@ -40,7 +47,7 @@ h2 {
 
 /* Hero Section */
 .hero-section {
-    background-image: url('images/tiger-hero.jpg');
+    background: url('../assets/images/background-tiger.jpg');
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -86,6 +93,15 @@ h2 {
     margin-bottom: 20px;
 }
 
+.btn-primary{
+    background-color: #4caf4e;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
 .testimonials .btn-book-now {
     background-color: #4CAF50;
     color: white;
@@ -107,4 +123,77 @@ footer {
 footer a {
     color: #fff;
     margin: 0 10px;
+}
+
+.hero-content{
+    text-align: top;
+    color: wheat
+}
+
+/* General Reset */
+header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px;
+    background-color: #2c2929;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Logo Styling */
+header .logo img {
+    height: 95px; /* Adjust logo size */
+    max-width: 100%;
+}
+
+/* Navigation Menu Styling */
+header nav ul {
+    list-style: none;
+    display: flex; /* Keep items in a horizontal row */
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Items */
+header nav ul li {
+    margin: 0 15px; /* Add spacing between menu items */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+header nav ul li a:hover {
+    color: #ff6600; /* Change color on hover */
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    header .logo {
+        flex: 1; /* Push the logo to take full width */
+    }
+
+    header nav ul {
+        flex: 2; /* Menu takes up remaining space */
+        justify-content: flex-end; /* Align menu items to the right */
+    }
+
+    header nav ul li {
+        margin: 0 8px; /* Reduce spacing in mobile view */
+    }
+
+    header nav ul li a {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
 }

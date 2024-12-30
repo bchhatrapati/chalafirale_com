@@ -6,30 +6,49 @@
     <title>Request a Call - Chalafirale</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/info_call.css">
 </head>
 <body>
-    <!-- Include header.html -->
-    <?php include 'header.html'; ?>
+    <!-- Header Section -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 
+    <!-- Info Call Form Section -->
     <section class="info-call-form">
         <h2>Request a Callback</h2>
         <form action="submit_form.php" method="POST" onsubmit="return validateForm()">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
 
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </section>
 
-    <!-- Include footer.html -->
-    <?php include 'footer.html'; ?>
+    <!-- Footer Section -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
+    <!-- JS Script -->
     <script src="js/script.js"></script>
 </body>
 </html>

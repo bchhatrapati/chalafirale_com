@@ -1,0 +1,82 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+/* Reserve cards */
+.reserves-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.reserve-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reserve-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reserve-card .image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.reserve-card .content {
+    padding: 15px;
+    text-align: center;
+}
+
+.reserve-card .content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 10px 0 15px;
+}
+
+.reserve-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e67e22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-card .btn:hover {
+    background-color: #d35400;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .reserves-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reserve-card {
+        width: 90%;
+    }
+}
