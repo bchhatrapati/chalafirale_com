@@ -1,0 +1,157 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #FF8C00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-secondary {
+    background-color: #444;
+}
+
+/* Hero Section */
+.hero {
+    background: url('../assets/images/hero-banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Featured Reserves Section */
+.featured-reserves {
+    background-color: #f9f9f9;
+}
+
+.featured-reserves h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.reserves-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reserve-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reserve-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.reserve-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.reserve-card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #FFFAE6;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+.why-choose-us li {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f1f1f1;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* CTA Section */
+.cta {
+    background: #2C3E50;
+    color: #fff;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .reserves-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reserve-card {
+        width: 90%;
+    }
+}
