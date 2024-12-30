@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -19,22 +20,71 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
+
 .main-header .logo a {
     color: #fff;
     text-decoration: none;
     font-size: 1.5em;
 }
+
 .main-header nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
+
 .main-header nav ul li {
     margin: 0 10px;
 }
+
 .main-header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media Query for Mobile Screens */
+@media screen and (max-width: 768px) {
+    .main-header nav ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        padding: 20px 0;
+        z-index: 1;
+    }
+
+    .main-header nav ul li {
+        margin: 10px 0;
+    }
+
+    .main-header nav ul li a {
+        font-size: 18px;
+    }
+
+    /* Show the menu when the hamburger is clicked */
+    .main-header nav ul.show {
+        display: block;
+    }
+
+    /* Display the hamburger icon */
+    .hamburger {
+        display: block;
+    }
 }
 
 /* Hero Section */
@@ -46,10 +96,12 @@ body {
     text-align: center;
     padding: 100px 20px;
 }
+
 .hero h1 {
     font-size: 3em;
     margin-bottom: 10px;
 }
+
 .hero button {
     background: #ff6f00;
     color: #fff;
@@ -59,6 +111,7 @@ body {
     font-size: 1em;
     border-radius: 5px;
 }
+
 .hero button:hover {
     background: #e65c00;
 }

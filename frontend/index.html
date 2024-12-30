@@ -3,36 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChalaFirale - Explore India's Tiger Reserves</title>
-    <link rel="stylesheet" href="style.css">
+    <title>ChalaFirale - Tiger Safari Tours</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Include Header -->
-    <div id="header-placeholder"></div>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="ChalaFirale Logo">
+            <h1>ChalaFirale</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="reserves.html">Explore Reserves</a></li>
+                <li><a href="book_now.html">Book Now</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Explore India's Majestic Tigers</h1>
-        <p>Your adventure into the wilderness starts here!</p>
-        <button onclick="window.location.href='book_now.html'">Book Now</button>
-    </section>
-
-    <!-- Main Content -->
-    <section class="main-content">
-        <h2>Discover Tiger Reserves</h2>
-        <p>Explore tiger reserves across India and witness their beauty firsthand.</p>
-        <div class="reserves-grid">
-            <!-- Reserve cards will go here -->
+        <div class="hero-text">
+            <h2>Experience the Roar</h2>
+            <p>Unforgettable Tiger Safaris Await!</p>
+            <a href="book_now.html" class="btn">Plan Your Safari</a>
         </div>
     </section>
 
-    <!-- Include Footer -->
-    <div id="footer-placeholder"></div>
+    <!-- Featured Reserves -->
+    <section class="featured-reserves">
+        <h2>Featured Tiger Reserves</h2>
+        <div class="reserves-container">
+            <div class="reserve">
+                <img src="assets/images/reserve1.jpg" alt="Tiger Reserve">
+                <h3>Jim Corbett National Park</h3>
+                <p>The oldest and one of the most popular tiger reserves in India.</p>
+                <a href="reserves.html" class="btn">Explore</a>
+            </div>
+            <div class="reserve">
+                <img src="assets/images/reserve2.jpg" alt="Tiger Reserve">
+                <h3>Bandhavgarh National Park</h3>
+                <p>Known for the highest density of tigers in the country.</p>
+                <a href="reserves.html" class="btn">Explore</a>
+            </div>
+            <div class="reserve">
+                <img src="assets/images/reserve3.jpg" alt="Tiger Reserve">
+                <h3>Ranthambore National Park</h3>
+                <p>A perfect blend of history and wildlife with its majestic fort.</p>
+                <a href="reserves.html" class="btn">Explore</a>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // Dynamically load header and footer
-        fetch("header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
-        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
-    </script>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Travelers Say</h2>
+        <div class="testimonial">
+            <p>"An incredible experience! Seeing a tiger in the wild was life-changing."</p>
+            <span>- Arjun R.</span>
+        </div>
+        <div class="testimonial">
+            <p>"ChalaFirale organized the perfect safari for us. Highly recommend it!"</p>
+            <span>- Priya K.</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ChalaFirale. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="assets/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="assets/icons/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="assets/icons/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
 </body>
 </html>
