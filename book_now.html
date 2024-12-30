@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Safari - Chalafirale</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Include header.html -->
+    <?php include 'header.html'; ?>
+
+    <section class="booking-form">
+        <h2>Book Your Safari</h2>
+        <form action="book_safari.php" method="POST">
+            <label for="reserve">Select Reserve:</label>
+            <select id="reserve" name="reserve" onchange="updatePrice()" required>
+                <option value="Tadoba">Tadoba</option>
+                <option value="Pench">Pench</option>
+                <option value="Ranthambore">Ranthambore</option>
+                <option value="Corbett">Jim Corbett</option>
+            </select>
+
+            <label for="date">Choose Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="people">No. of People:</label>
+            <input type="number" id="people" name="people" min="1" required>
+
+            <p>Price: <span id="price">INR 300</span></p>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+    <!-- Include footer.html -->
+    <?php include 'footer.html'; ?>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

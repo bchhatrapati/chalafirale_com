@@ -1,83 +1,73 @@
-// Wait for the DOM to fully load
-document.addEventListener('DOMContentLoaded', function() {
+// Function to update the price based on the selected reserve
+function updatePrice() {
+    const reserve = document.getElementById('reserve').value;
+    const people = document.getElementById('people').value;
+    let pricePerPerson = 0;
 
-    // Smooth Scroll Functionality for anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Adjust for any fixed header
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Scroll to top button functionality
-    const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
-
-    if (scrollToTopBtn) {
-        scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+    // Determine price per person based on the selected reserve
+    switch (reserve) {
+        case 'Tadoba':
+            pricePerPerson = 300;
+            break;
+        case 'Pench':
+            pricePerPerson = 350;
+            break;
+        case 'Ranthambore':
+            pricePerPerson = 400;
+            break;
+        case 'Corbett':
+            pricePerPerson = 450;
+            break;
+        default:
+            pricePerPerson = 300;
     }
 
-    // Navbar toggle functionality for mobile devices
-    const navbarToggle = document.getElementById('navbar-toggle');
-    const navbarMenu = document.getElementById('navbar-menu');
+    // Update total price
+    const totalPrice = pricePerPerson * people;
+    document.getElementById('price').innerText = `INR ${totalPrice}`;
+}
 
-    if (navbarToggle && navbarMenu) {
-        navbarToggle.addEventListener('click', function() {
-            navbarMenu.classList.toggle('active');
-            navbarToggle.classList.toggle('active');
-        });
+// Validate the booking form
+function validateBookingForm() {
+    const reserve = document.getElementById('reserve').value;
+    const date = document.getElementById('date').value;
+    const people = document.getElementById('people').value;
+
+    // Check if the reserve is selected
+    if (!reserve) {
+        alert('Please select a reserve.');
+        return false;
     }
 
-    // Close navbar when a menu item is clicked (for mobile view)
-    const menuItems = document.querySelectorAll('#navbar-menu a');
-    menuItems.forEach(item => {
-        item.addEventListener('click', function() {
-            if (navbarMenu.classList.contains('active')) {
-                navbarMenu.classList.remove('active');
-                navbarToggle.classList.remove('active');
-            }
-        });
-    });
-
-    // Handle page loading animation (if any)
-    const loader = document.getElementById('loader');
-    if (loader) {
-        window.addEventListener('load', function() {
-            loader.style.display = 'none'; // Hide the loader once the page is loaded
-        });
+    // Check if a date is selected
+    if (!date) {
+        alert('Please select a date.');
+        return false;
     }
 
-    // Scroll effect for elements (appear on scroll)
-    const scrollElements = document.querySelectorAll('.scroll-effect');
-
-    function checkScroll() {
-        const windowHeight = window.innerHeight;
-        scrollElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            if (elementTop < windowHeight - 100) {
-                element.classList.add('visible');
-            } else {
-                element.classList.remove('visible');
-            }
-        });
+    // Check if the number of people is valid
+    if (!people || people <= 0) {
+        alert('Please enter a valid number of people.');
+        return false;
     }
 
-    window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Check immediately on page load
+    // If everything is valid, proceed with the form submission
+    return true;
+}
 
+// Handle the form submission event
+document.getElementById('booking-form')?.addEventListener('submit', function (e) {
+    if (!validateBookingForm()) {
+        e.preventDefault(); // Prevent form submission if validation fails
+    }
+});
+
+// Optional: Handle changes in the "No. of People" field and dynamically update price
+document.getElementById('people')?.addEventListener('input', function () {
+    updatePrice();
+});
+
+// Optional: Handle changes in the "Reserve" dropdown and update the price accordingly
+document.getElementById('reserve')?.addEventListener('change', function () {
+    updatePrice();
 });
