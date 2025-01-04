@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your feedback with ChalaFirale and help us improve our tiger safari experiences.">
+    <meta name="keywords" content="Feedback, Customer Reviews, ChalaFirale, Safari Feedback">
+    <title>Feedback - ChalaFirale</title>
+    <link rel="icon" href="assets/logos/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <style>
+        /* Star Rating Styles */
+        .star-rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: #FFD700; /* Gold color for selected stars */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback-section">
+        <div class="booking-form">
+            <h2>We Value Your Feedback</h2>
+            <form action="https://formspree.io/f/xlddobkw" method="POST">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Trip Experience -->
+                <div class="form-group">
+                    <label for="trip_experience">How was your overall trip experience?</label>
+                    <textarea id="trip_experience" name="trip_experience" placeholder="Share your thoughts about the safari and trip experience..." rows="3" required></textarea>
+                </div>
+
+                <!-- Memorable Moments -->
+                <div class="form-group">
+                    <label for="memorable_moments">What was the most memorable part of your trip?</label>
+                    <textarea id="memorable_moments" name="memorable_moments" placeholder="Tell us about any special moments or highlights from your trip..." rows="3"></textarea>
+                </div>
+
+                <!-- Rating (Star-Based) -->
+                <div class="form-group">
+                    <label for="rating">Your Overall Rating</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5">
+                        <label for="star5" title="5 stars">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 stars">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 stars">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 stars">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 star">★</label>
+                    </div>
+                </div>
+
+                <!-- Additional Comments -->
+                <div class="form-group">
+                    <label for="additional_feedback">Additional Comments</label>
+                    <textarea id="additional_feedback" name="additional_feedback" placeholder="Any other suggestions or feedback?" rows="3"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

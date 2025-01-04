@@ -1,0 +1,71 @@
+/* Feedback Form Styling */
+.feedback-section {
+    background-color: #e8f5e9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.feedback-section .booking-form {
+    background-color: #f4f4f4;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.feedback-section h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.feedback-section .form-group {
+    margin-bottom: 15px;
+}
+
+.feedback-section label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.feedback-section input,
+.feedback-section textarea,
+.feedback-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.feedback-section input:focus,
+.feedback-section textarea:focus,
+.feedback-section select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.feedback-section textarea {
+    resize: none;
+}
+
+.feedback-section .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-section .btn:hover {
+    background-color: #388e3c;
+}

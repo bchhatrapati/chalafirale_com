@@ -102,7 +102,7 @@ h2 {
     border: none;
     cursor: pointer;
 }
-.testimonials .btn-book-now {
+.testimonials .btn-book-now{
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -195,5 +195,58 @@ header nav ul li a:hover {
 
     header nav ul li a {
         font-size: 14px; /* Smaller font size for mobile */
+    }
+}
+
+
+/* Feedback Section */
+.feedback-section {
+    text-align: center;
+    padding: 20px;
+    margin: 40px 0; /* Add spacing around the section */
+    background-color: #fff; /* Keep consistent with other sections */
+}
+
+.feedback-section h2 {
+    margin-bottom: 15px;
+    font-size: 26px;
+    color: #333;
+}
+
+.feedback-section p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.feedback-section .btn-primary {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-section .btn-primary:hover {
+    background-color: #45a049;
+}
+
+/* Ensure footer and feedback section alignment */
+footer {
+    margin-top: 40px; /* Add extra spacing to avoid overlap */
+}
+
+/* Responsive Design for Feedback Section */
+@media (max-width: 768px) {
+    .feedback-section {
+        padding: 15px;
+    }
+
+    .feedback-section .btn-primary {
+        width: 80%; /* Full-width button for mobile view */
     }
 }
