@@ -49,7 +49,7 @@ h2 {
 .hero-section {
     background: url('../assets/images/background-tiger.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: left;
     height: 500px;
     display: flex;
     justify-content: center;
@@ -249,4 +249,14 @@ footer {
     .feedback-section .btn-primary {
         width: 80%; /* Full-width button for mobile view */
     }
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    color: #190902;
+    text-align: center;
+}
+.hero-content p {
+    font-size: 16px;
+    color: #000;
 }
