@@ -1,99 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chalafirale offers unforgettable tiger safari experiences in India’s top tiger reserves, including Tadoba, Pench, Ranthambore, and Jim Corbett. Book your tour now!">
-    <meta name="keywords" content="Tiger safari, India, wildlife tour, Tadoba, Pench, Ranthambore, Jim Corbett">
-    <title>ChalaFirale - The Jungle Safari World</title>
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChalaFirale - Launching Soon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 90%;
+      background: #ffffff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #ff7b00;
+      margin: 0 0 10px;
+      animation: pulse 2s infinite alternate;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    @keyframes pulse {
+      from {
+        opacity: 0.8;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .circular-loader {
+      margin: 20px auto;
+      width: 64px;
+      height: 64px;
+      border: 6px solid #ebedee;
+      border-top: 6px solid #ff7b00;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #666666;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <div id="header"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-    </script>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1>Experience the Wild with ChalaFirale</h1>
-            <p>Explore India's top tiger reserves on an unforgettable safari!</p>
-            <a href="book_now.html" class="btn-primary">Book Your Safari Now</a>
-        </div>
-    </section>
-
-    <!-- Featured Tiger Reserves -->
-    <section class="featured-reserves">
-        <h2>Featured Tiger Reserves</h2>
-        <div class="reserve-list">
-            <div class="reserve-item">
-                <img src="assets/images/tadoba.jpg" alt="Tadoba Tiger Reserve">
-                <h3>Tadoba</h3>
-                <p>One of India's oldest and most famous tiger reserves.</p>
-                <a href="reserves.html#tadoba">Learn More</a>
-            </div>
-            <div class="reserve-item">
-                <img src="assets/images/pench.jfif" alt="Pench Tiger Reserve">
-                <h3>Pench</h3>
-                <p>A picturesque reserve known for its rich wildlife.</p>
-                <a href="reserves.html#pench">Learn More</a>
-            </div>
-            <div class="reserve-item">
-                <img src="assets/images/ranthambore.jpg" alt="Ranthambore National Park">
-                <h3>Ranthambore</h3>
-                <p>Famous for its tiger sightings and historical forts.</p>
-                <a href="reserves.html#ranthambore">Learn More</a>
-            </div>
-            <div class="reserve-item">
-                <img src="assets/images/corbett.webp" alt="Jim Corbett National Park">
-                <h3>Jim Corbett</h3>
-                <p>The oldest national park in India, a true tiger haven.</p>
-                <a href="reserves.html#corbett">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="why-choose-us">
-        <h2>Why ChalaFirale?</h2>
-        <p>We offer personalized safari tours in India's best tiger reserves with a commitment to safety, conservation, and unforgettable experiences.</p>
-    </section>
-
-    <!-- Customer Testimonials -->
-    <section class="testimonials">
-        <h2>Customer Testimonials</h2>
-        <div class="testimonial-item">
-            <p>"The safari experience was unforgettable! We saw tigers up close in Tadoba. Highly recommend Chala Firale!"</p>
-            <p>- John Doe</p>
-        </div>
-        <div class="testimonial-item">
-            <p>"Amazing trip to Ranthambore. Excellent service and knowledgeable guides. Will book again!"</p>
-            <p>- Jane Smith</p>
-        </div>
-        <a href="book_now.html" class="btn-book-now">Book Now</a>
-    </section>
-
-    <!-- Feedback Section -->
-    <section class="feedback-section">
-        <h2>Your Feedback Matters!</h2>
-        <p>We'd love to hear about your experience with ChalaFirale. Help us improve by sharing your feedback.</p>
-        <a href="feedback.html" class="btn-primary">Give Feedback</a>
-    </section>
-
-    <!-- Footer -->
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
-
-    <script src="js/script.js"></script>
+  <div class="container">
+    <img src="Site under construction Chalafirale.jpg" alt="Site Under Construction" />
+    <!-- <h1>Launching Soon</h1>
+    <h2>Website is under construction</h2> -->
+    <div class="circular-loader"></div>
+    <div class="footer">Stay tuned for something amazing!</div>
+  </div>
 </body>
 </html>
